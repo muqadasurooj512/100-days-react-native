@@ -33,7 +33,7 @@ Each day has its own folder with:
 
 ## 📅 Challenge Progress
 
-| Day | Level        | Title / Challenge                          |           |
+| Day | Level        | Title / Challenge                          |
 |-----|--------------|--------------------------------------------|
 | 1   | Beginner     | Two Texts + Button to Toggle Text          | 
 | 2   | Beginner     | Counter with + and - buttons               | 
