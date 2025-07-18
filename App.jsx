@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Day2 from './src/Day2'
-import Day3 from './src/Day3'
+import Day5 from './src/Day5'
 
 const App = () => {
   return (
     <View style={styles.container}>
      {/* <Day1 /> */}
    {/* <Day2/> */}
-   <Day3/>
+   <Day5/>
     </View>
   )
 }
@@ -18,7 +18,7 @@ export default App
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
+      // justifyContent: 'center',
+      // alignItems: 'center',
     },
 })
