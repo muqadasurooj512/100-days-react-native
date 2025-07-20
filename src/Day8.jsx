@@ -1,19 +1,34 @@
-//Build a simple login screen UI with email & password fields.
+// Create a simple registration form and console log the entered data.
 //Show an alert when a button is clicked.
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
-const Day7 = () => {
+
+const Day8 = () => {
+  const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    Alert.alert('Login Pressed', `Email: ${email}\nPassword: ${password}`);
+  const handleRegister = () => {
+   console.log('Name:', userName);
+    console.log('Email:', email);
+    console.log('Password:', password);
+    // Alert.alert('Register Pressed', `UserName: ${userName}\nEmail: ${email}\nPassword: ${password}`);
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Register</Text>
+      
+      <TextInput
+        style={styles.input}
+        placeholder="UserName"
+        placeholderTextColor="#888"
+        keyboardType="default"
+        // autoCapitalize="none"
+        value={userName}
+        onChangeText={setUserName}
+      />
 
       <TextInput
         style={styles.input}
@@ -34,14 +49,14 @@ const Day7 = () => {
         onChangeText={setPassword}
       />
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Log In</Text>
+      <TouchableOpacity style={styles.button} onPress={handleRegister}>
+        <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default Day7;
+export default Day8;
 
 const styles = StyleSheet.create({
   container: {
