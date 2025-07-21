@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
-
 const Day8 = () => {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
