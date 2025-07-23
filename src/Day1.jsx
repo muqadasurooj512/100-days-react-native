@@ -1,4 +1,5 @@
-//Create a screen with two Text components. Change the text when a button is pressed.
+//Build a counter app with + and - buttons.
+
 
 import {  StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import {useState} from 'react'
