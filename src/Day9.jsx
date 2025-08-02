@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Switch, StyleSheet, Appearance } from 'react-native';
 
-const Day9 = () => {
+const Day9 = () => {                                                                                                                                                                                  nnnnnnnnnnnnnnn
+  
   // Detect initial system theme
   const systemScheme = Appearance.getColorScheme();
 
