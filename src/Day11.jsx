@@ -2,22 +2,24 @@
 import { StyleSheet, Text, View,TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-
 const Day11 = () => {
-  const [task, setTask] = React.useState(''); // State to hold the current task input
-  const [list, setList] = React.useState([]); // Initialize an empty list to store tasks
+  const [task, setTask] = React.useState('');
+  const [list, setList] = React.useState([]); 
 
   // Function to add a new task to the list
   const addTask = () => {
-    if(task.trim() !== '') { // Check if the input is not empty
-      setList([...list, {id:Date.now().toString(), title: task}]);// Add the new task to the list
-      console.log(list); // Log the current list of tasks
-      console.log(task); // Log the current task being added
-      setTask(''); // Clear the input field after adding the task
+    if(task.trim() !== '') {
+      setList([...list, {id:Date.now().toString(), title: task}]); 
+      console.log(list);
+      console.log(task); 
+      setTask(''); 
     }
 
   }
   
+
+
+
   return (
     <View style={styles.container}>
       <Text style={{ color: '#367c53ff', fontSize: 50, fontWeight: 'bold', marginBottom: 20 }}>To-Do List</Text>
