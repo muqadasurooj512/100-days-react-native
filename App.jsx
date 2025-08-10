@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Day2 from './src/Day2'
-import Day11 from './src/Day11'
+import Day13 from './src/Day13'
 
 const App = () => {
   return (
     <View style={styles.container}>
      {/* <Day1 /> */}
    {/* <Day2/> */}
-   <Day11/>
+   <Day13/>
     </View>
   )
 }
