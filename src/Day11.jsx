@@ -16,9 +16,10 @@ const Day11 = () => {
     }
 
   }
-  
-
-
+  // Function to delete task to the list 
+  const deleteTask=(id)=> {
+    setList(list.filter(item=>item.id !== id ))
+  };
 
   return (
     <View style={styles.container}>
@@ -31,9 +32,11 @@ const Day11 = () => {
         value={task}
         onChangeText={setTask}
       />
-      <TouchableOpacity style={styles.button} onPress={addTask}  >
+        <TouchableOpacity style={styles.button} onPress={addTask}  >
         <Text style={styles.buttonText}>Add Task</Text>
       </TouchableOpacity>
+  
+      
       </View>
        <View style={{ width: '80%', paddingTop: 20, justifyContent: 'center' }}>
         <Text style={{ color: '#367c53ff', fontSize: 30, fontWeight: 'bold', marginBottom: 10 }}>Tasks:</Text>
@@ -43,6 +46,9 @@ const Day11 = () => {
            <View key={item.id} style={{ marginBottom: 10, paddingHorizontal: 10, paddingVertical: 10, backgroundColor: '#367c53ff', borderRadius: 8 }}>
              <Text style={{ color: '#070707ff', fontSize: 18, fontWeight: 'bold' }}>{item.title}</Text>
               <Text style={{ color: 'white', fontSize: 16 }}>{item.id}</Text>
+              <TouchableOpacity style={styles.button} onPress={() => deleteTask(item.id)}  >
+        <Text style={styles.buttonText}>Delete Task</Text>
+      </TouchableOpacity>
            </View>
          ))}
        </View>
@@ -71,7 +77,7 @@ const styles = StyleSheet.create({
     
   },
   innerContainer: {
-    flexDirection: 'row',
+    flexDirection:"row",
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 30,
