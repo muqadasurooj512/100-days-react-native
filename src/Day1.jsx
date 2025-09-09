@@ -1,22 +1,23 @@
 //Build a counter app with + and - buttons.
 
+// UseState | Initialize state variable 'count' with 0
+// Increment count
+// Decrement count
 
 import {  StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import {useState} from 'react'
-
 const Day1 = () => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0); 
   return (
     <View style={styles.container}>
       <View style={styles.textContainer1}>
          <Text style={styles.text}>{count}</Text>
-      
       </View>
        <View style={styles.textContainer}>
-      <TouchableOpacity style={styles.button} onPress={() => setCount(count + 1)}>
+      <TouchableOpacity style={styles.button} onPress={() => setCount(count + 1)}> 
         <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => setCount(count - 1)}>
+        <TouchableOpacity style={styles.button} onPress={() => setCount(count - 1)}> 
         <Text style={styles.buttonText}>-</Text>
         </TouchableOpacity>
         </View>
@@ -28,26 +29,27 @@ export default Day1
 
 const styles = StyleSheet.create({
   container:{
-    backgroundColor:"blue",
-    padding: 20,
+    backgroundColor:"#8d5f7eff",
+    padding: 15,
      justifyContent:"center",
      alignItems:"center",
      borderWidth:8,
      borderRadius:15
   },
   textContainer1:{
- backgroundColor:"#333",
-    padding: 25,
+ backgroundColor:"#6b98b3ff",
+paddingVertical: 25,
+    paddingHorizontal: 60,
     alignItems: 'center',
     marginBottom: 50,
-    borderRadius: 15,
+    borderRadius: 25,
     borderColor:'white',
     borderWidth: 1,
-    width: '50%',
+   
     justifyContent: 'center',
   },
   textContainer:{
-    backgroundColor:"#333",
+    backgroundColor:"#6b98b3ff",
     padding: 15,
     flexDirection:'row',
     justifyContent:'space-between',
@@ -66,15 +68,15 @@ const styles = StyleSheet.create({
 
   },
   button: {
-    backgroundColor: 'white',
-    padding: 15,
+    backgroundColor: '#8d5f7eff',
+    padding: 10,
     borderRadius: 15,
     width: '35%',
     alignItems: 'center',
   },
   buttonText: {
-    color: 'black',
-    fontSize: 40,
+    color: 'white',
+    fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
   },
